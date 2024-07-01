@@ -1,5 +1,4 @@
-﻿using EjercicioClase1Modulo2.Ejercicio_1;
-using EjercicioClase1Modulo2.Ejercicio_2;
+﻿
 using System.Text.Json;
 
 namespace EjercicioClase1Modulo2
@@ -21,9 +20,10 @@ namespace EjercicioClase1Modulo2
             var dataEjercicio2 = File.ReadAllText(pathEjercicio2);
             var dataEjercicio3 = File.ReadAllText(pathEjercicio3);
 
-
-
-
+            var resultado_ejecicio1 = JsonSerializer.Deserialize<RedSocialEjer1>(dataEjercicio1);
+            var sedultado_ejercicio2 = JsonSerializer.Deserialize<Torneo>(dataEjercicio2);
+            var resultado_ejercicio3 = JsonSerializer.Deserialize<Market>(dataEjercicio3);
+            Console.WriteLine("ejercicio1"); 
         }
     }
 }
